@@ -22,7 +22,7 @@ public class P_mypagecontroller {
 	  	model.addAttribute("user",myinfo);
     	return "/korBook/P_mypage"; // 내 정보 페이지의 JSP 파일명
     }
-	@GetMapping("/updetemyinfo")
+	@PostMapping("/updetemyinfo")
     public String updetemyinfo(HttpServletRequest req,Model model) {
 		HttpSession session= req.getSession();
 	  	String userid=(String)session.getAttribute("userid");
@@ -34,7 +34,7 @@ public class P_mypagecontroller {
 		mydao.updatemyinfo(userid,mobile,email,address,address_detail);
 		return "redirect:/mypage";
     }
-	@GetMapping("/changepw")
+	@PostMapping("/changepw")
     public String changepw(HttpServletRequest req,Model model) {
 		HttpSession session= req.getSession();
 		String userid=(String)session.getAttribute("userid");
