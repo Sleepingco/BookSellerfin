@@ -64,7 +64,7 @@
 <body>
 
     <h1>내 정보</h1>
-    <form id=myinfoUpdate method="get" action="updetemyinfo">
+    <form id=myinfoUpdate method="post" action="updetemyinfo">
     <a href="/">홈으로</a>
     <table>
     <tbody>
