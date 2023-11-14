@@ -34,7 +34,7 @@ public class P_mypagecontroller {
 		mydao.updatemyinfo(userid,mobile,email,address,address_detail);
 		return "redirect:/mypage";
     }
-	@PostMapping("/changepw")
+	@GetMapping("/changepw")
     public String changepw(HttpServletRequest req,Model model) {
 		HttpSession session= req.getSession();
 		String userid=(String)session.getAttribute("userid");
